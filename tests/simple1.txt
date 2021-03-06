@@ -1,0 +1,14 @@
+init Frasier 100 10000
+earnings total
+add Niles 20000
+add Eddie
+tutor Niles 10
+tutor Eddie
+tutor Eddie 1.5
+earnings student
+sessions
+tutor Niles
+sessions
+remove Eddie
+sessions
+earnings total

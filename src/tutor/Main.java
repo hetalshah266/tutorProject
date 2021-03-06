@@ -10,7 +10,9 @@ public class Main {
     public static void main(String[] args) throws FileNotFoundException {
         for (String s: args) {
             File f = new File(s);
+
             if (f.exists()) {
+
                 getCommands(f);
             }
 
@@ -31,8 +33,10 @@ public class Main {
                 System.out.println("ERROR: tutor already initialized");
             } else if (s.length == 3) {
                 tutor = new Tutor(s[1], Double.parseDouble(s[2]));
+                tutorInitialized = true;
             } else if  (s.length == 4) {
                 tutor = new Tutor(s[1], Double.parseDouble(s[2]), Double.parseDouble(s[3]));
+                tutorInitialized = true;
             } else {
                 // throw error
                 System.out.println("ERROR: wrong number of arguments for init command");
@@ -49,6 +53,7 @@ public class Main {
                 // throw error
                 System.out.println("ERROR: wrong number of arguments for addStudent command");
             }
+
         } else if (s[0].equals("tutor")) {
             if (!tutorInitialized) {
                 // throw error
@@ -93,8 +98,6 @@ public class Main {
             if (!tutorInitialized) {
                 // throw error
                 System.out.println("ERROR: tutor is not initialized");
-            } else if (s.length == 1) {
-                tutor.getStudents();
             } else if (s.length == 2) {
                 if (s[1].equals("student")) {
                     tutor.getStudentEarning();

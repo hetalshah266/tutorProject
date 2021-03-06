@@ -27,7 +27,7 @@ public class Tutor implements Serializable {
 
     /** Creates a Tutor object with given name and initialMoney is 0. */
     public Tutor (String name, double defaultRate) {
-        this(name, 0, defaultRate);
+        this(name, defaultRate, 0);
     }
 
     /** Creates a Student object with given name and default rate and adds it to tutor's students. */
@@ -41,7 +41,8 @@ public class Tutor implements Serializable {
             // throw error
             System.out.println("ERROR: student name already exists");
         } else {
-            _students.put(name, new Student(name, rate));
+            Student s = new Student(name, rate);
+            _students.put(name, s);
         }
     }
 
@@ -63,7 +64,7 @@ public class Tutor implements Serializable {
     /** Calls Student class tutor method on student. Tutors student for given hours. */
     public void tutor(String name, double hours) {
         Student s = _students.get(name);
-        s.getTutored(1);
+        _totalEarnings += s.getTutored(hours);
     }
 
     /** Outputs earnings from each student*/
@@ -104,7 +105,7 @@ public class Tutor implements Serializable {
         System.out.println("Active Students:");
         for (Student s: _students.values()) {
             if (s._active) {
-                System.out.println("   * " + s);
+                System.out.println("   * " + s._name);
             }
         }
     }
@@ -114,7 +115,7 @@ public class Tutor implements Serializable {
         System.out.println("Inactive Students:");
         for (Student s: _students.values()) {
             if (!s._active) {
-                System.out.println("   * " + s);
+                System.out.println("   * " + s._name);
             }
         }
     }

@@ -1,0 +1,16 @@
+Students
+    * Angela
+    * Dwight
+    * Pam
+Active Students:
+   * Angela
+   * Pam
+Inactive Students:
+   * Dwight
+Earnings by Student
+   * Angela: 187.1
+   * Dwight: 150.0
+   * Pam: 40.0
+Total Earnings:
+   * 377.1
+

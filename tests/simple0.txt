@@ -1,0 +1,16 @@
+init Jim 20
+add Pam
+add Dwight 100
+add Angela 93.55
+tutor Pam
+tutor Pam
+tutor Angela
+tutor Angela
+tutor Dwight .5
+tutor Dwight
+remove Dwight
+students
+students active
+students inactive
+earnings student
+earnings total

@@ -16,7 +16,7 @@ public class Student implements Serializable {
     int _sessions;
 
     /** Is student currently getting tutored **/
-    boolean _active;
+    boolean _active = true;
 
     /** Creates a Student object with given name, grade, and tutoring ratePerHour. */
     public Student(String name, double ratePerHour) {
@@ -26,13 +26,15 @@ public class Student implements Serializable {
         _ratePerHour = ratePerHour;
     }
 
-    public void getTutored(double hours) {
+    public double getTutored(double hours) {
         if (!_active) {
             // throw error
             System.out.println("ERROR: Student not currently active");
+            return 0;
         } else {
             _paid += _ratePerHour * hours;
             _sessions++;
+            return _ratePerHour * hours;
         }
     }
 

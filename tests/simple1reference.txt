@@ -1,0 +1,13 @@
+Total Earnings:
+   * 10000.0
+Earnings by Student
+   * Niles: 200000.0
+   * Eddie: 250.0
+Sessions:
+   * Niles: 1
+   * Eddie: 2
+Sessions:
+   * Niles: 2
+   * Eddie: 2
+Total Earnings:
+   * 230250.0
